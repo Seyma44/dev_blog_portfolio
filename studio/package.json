@@ -1,0 +1,31 @@
+{
+  "name": "blog",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Şeyma Sandıkçı <sandikci_seyma@hotmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.17.1",
+    "@sanity/code-input": "^2.17.1",
+    "@sanity/components": "^2.14.0",
+    "@sanity/core": "^2.17.1",
+    "@sanity/default-layout": "^2.17.1",
+    "@sanity/default-login": "^2.17.1",
+    "@sanity/desk-tool": "^2.17.1",
+    "@sanity/vision": "^2.15.0",
+    "get-video-id": "^3.2.0",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0",
+    "react-youtube": "^7.13.1"
+  }
+}

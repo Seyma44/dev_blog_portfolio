@@ -6,16 +6,17 @@ import { LeftSection } from './HeroStyles';
 
 const Hero = (props) => (
   <>
-    <Section row nopadding>
+    <Section row nopadding > 
       <LeftSection>
         <SectionTitle main center>
-          Welcome To <br />
-          My Personal Portfolio
+            Wellcome to<br />
+            My Personal Website 
         </SectionTitle>
         <SectionText>
-        The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.
+        Şeyma is a front-end developer, specializing in using interfaces such as 
+        Atomic Architecture, React, and Canvas to create interactive experiences for her web developer portfolio’s viewers.
         </SectionText>
-        <Button onClick={props.handleClick}>Learn More</Button>
+        <Button onClick={()=> window.location = '#footer'} >Contact</Button> 
       </LeftSection>
     </Section>
   </>

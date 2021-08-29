@@ -1,16 +1,23 @@
 import Link from 'next/link';
 import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-import { DiCssdeck } from 'react-icons/di';
+import { AiFillGitlab, AiFillLinkedin } from 'react-icons/ai';
+import {TiSocialGithub } from 'react-icons/ti'
+import { DiCode } from 'react-icons/di';
+import Head from 'next/head'
+import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './HeaderStyles';
 
-import { Container, Div1, Div2, Div3, NavLink, SocialIcons } from './HeaderStyles';
 
 const Header = () =>  (
   <Container>
+    <Head>
+      <title>SeymaDEV</title>
+        <meta name='description' content='Portfolio Website' />
+        
+    </Head>
     <Div1>
       <Link href="/">
-        <a style={{ display: 'flex', alignItems: 'center', color:"white" }}>
-          <DiCssdeck size="3rem" /> <span>Portfolio</span>
+        <a style={{ display: 'flex', alignItems: 'center', color:"#f46737",  marginBottom: '20;'}}>
+        <Span> Seyma </Span><DiCode size="5rem" /> <Span> DEV </Span>
         </a>
       </Link>
     </Div1>
@@ -21,28 +28,34 @@ const Header = () =>  (
         </Link>
       </li>
       <li>
-        <Link href="#tech">
-          <NavLink>Technologies</NavLink>
+        <Link href="#skills">
+          <NavLink>Skills</NavLink>
         </Link>
-      </li>        
+      </li>    
       <li>
-        <Link href="#about">
-          <NavLink>About</NavLink>
+        <Link href="#myjourney">
+          <NavLink>MyJourney</NavLink>
         </Link>
-      </li>        
+      </li>  
+      <li>
+        <Link href="/blog">
+          <NavLink>Blog</NavLink>
+        </Link>
+      </li>          
     </Div2>
       <Div3>
+      <SocialIcons href="https://google.com">
+          <AiFillGitlab size="3rem"/>
+        </SocialIcons>
         <SocialIcons href="https://google.com">
-          <AiFillGithub size="3rem" />
+          <TiSocialGithub size="3rem" />
         </SocialIcons>
         <SocialIcons href="https://google.com">
           <AiFillLinkedin size="3rem" />
         </SocialIcons>
-        <SocialIcons href="https://google.com">
-          <AiFillInstagram size="3rem"/>
-        </SocialIcons>
       </Div3>
     </Container>
+    
 );
 
 export default Header;

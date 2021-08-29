@@ -17,6 +17,9 @@ export const Container = styled.div`
     grid-row-gap: 0.5rem;
   }
 `;
+export const Span =styled.span `
+font-size: 2rem;
+`;
 export const Div1 = styled.div`
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
@@ -47,9 +50,9 @@ export const Div3 = styled.div`
 
 // Navigation Links
 export const NavLink = styled.a`
-  font-size: 2rem;
-  line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+  line-height: 50px;
+  color: #b133ff;
   transition: 0.4s ease;
   &:hover {
     color: #fff;
@@ -112,11 +115,11 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
 
 export const SocialIcons = styled.a`
 transition: 0.3s ease;
-color: white;
-border-radius: 50px;
+color: #ff40df;
+border-radius: 0px;
   padding: 8px;
 &:hover {
-    background-color: #212d45;
+    background-color: white;
     transform: scale(1.2);
     cursor: pointer;
     
