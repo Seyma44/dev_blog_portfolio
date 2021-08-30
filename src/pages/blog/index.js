@@ -91,7 +91,7 @@ const Blog = ({posts}) => {
     </main>
     )
 }
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const query = `*[ _type == "post"] | order(_createdAt desc) {
         title,
         slug,
