@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import sanityClient from '../../../sanity'
 import Link from 'next/link' 
-import getVideoId from '../../../studio/node_modules/get-video-id'
-import YouTube from '../../../studio/node_modules/react-youtube'
 import SanityBlockContent from '@sanity/block-content-to-react'
 
 import {Span, Div1} from '../../../src/components/Header/HeaderStyles'
@@ -16,21 +14,13 @@ const Blog = ({posts}) => {
     }[0]`
     const singlePost = await sanityClient.fetch(query, { slug })
 
-    const serializers = {
-      types: {
-        youtube: ({ node }) => {
-          const { url } = node
-          const { id } = getVideoId(url)
-          return <YouTube videoId={id} />
-        },
-      },
-    }
+   
     setBlockContent(
       <SanityBlockContent
         projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
         dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
         blocks={singlePost.body}
-        serializers={serializers}
+        
       />
     )
   }
